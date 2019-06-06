@@ -6,5 +6,7 @@ target 'WhiteSpectreDemo' do
   use_frameworks!
 
   # Pods for WhiteSpectreDemo
+  pod 'Moya'
+  pod 'ReachabilitySwift'
 
 end

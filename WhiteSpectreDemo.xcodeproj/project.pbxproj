@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A9D46EA65C79331B853E496 /* Pods_WhiteSpectreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97761C66172F89B300CA8D69 /* Pods_WhiteSpectreDemo.framework */; };
 		57B814E622A92A4E009F8E00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B814E522A92A4E009F8E00 /* AppDelegate.swift */; };
 		57B814E822A92A4E009F8E00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B814E722A92A4E009F8E00 /* ViewController.swift */; };
 		57B814EB22A92A4E009F8E00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B814E922A92A4E009F8E00 /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		57B814EC22A92A4F009F8E00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57B814EF22A92A4F009F8E00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57B814F122A92A4F009F8E00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79D337405A654F7860B24197 /* Pods-WhiteSpectreDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteSpectreDemo.release.xcconfig"; path = "Target Support Files/Pods-WhiteSpectreDemo/Pods-WhiteSpectreDemo.release.xcconfig"; sourceTree = "<group>"; };
+		97761C66172F89B300CA8D69 /* Pods_WhiteSpectreDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteSpectreDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E431BCC1E26556673B876C0D /* Pods-WhiteSpectreDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteSpectreDemo.debug.xcconfig"; path = "Target Support Files/Pods-WhiteSpectreDemo/Pods-WhiteSpectreDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A9D46EA65C79331B853E496 /* Pods_WhiteSpectreDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		465007C3A85AC6349134B10C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E431BCC1E26556673B876C0D /* Pods-WhiteSpectreDemo.debug.xcconfig */,
+				79D337405A654F7860B24197 /* Pods-WhiteSpectreDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		57B814D922A92A4E009F8E00 = {
 			isa = PBXGroup;
 			children = (
 				57B814E422A92A4E009F8E00 /* WhiteSpectreDemo */,
 				57B814E322A92A4E009F8E00 /* Products */,
+				465007C3A85AC6349134B10C /* Pods */,
+				7F6C5F4B51088AFCFC0216F7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +89,14 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		7F6C5F4B51088AFCFC0216F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97761C66172F89B300CA8D69 /* Pods_WhiteSpectreDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57B814F422A92A4F009F8E00 /* Build configuration list for PBXNativeTarget "WhiteSpectreDemo" */;
 			buildPhases = (
+				A01BC041EB58DC622B82AD14 /* [CP] Check Pods Manifest.lock */,
 				57B814DE22A92A4E009F8E00 /* Sources */,
 				57B814DF22A92A4E009F8E00 /* Frameworks */,
 				57B814E022A92A4E009F8E00 /* Resources */,
+				C6F0D298A863ADB103CD630E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,6 +164,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A01BC041EB58DC622B82AD14 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhiteSpectreDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6F0D298A863ADB103CD630E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhiteSpectreDemo/Pods-WhiteSpectreDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhiteSpectreDemo/Pods-WhiteSpectreDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhiteSpectreDemo/Pods-WhiteSpectreDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		57B814DE22A92A4E009F8E00 /* Sources */ = {
@@ -288,6 +357,7 @@
 		};
 		57B814F522A92A4F009F8E00 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E431BCC1E26556673B876C0D /* Pods-WhiteSpectreDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -306,6 +376,7 @@
 		};
 		57B814F622A92A4F009F8E00 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79D337405A654F7860B24197 /* Pods-WhiteSpectreDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
