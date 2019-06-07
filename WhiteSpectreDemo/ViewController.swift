@@ -12,9 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        API.getGifs(for: "cats", page: 0) { results in
+            results.forEach {
+                print($0.url)
+            }
+        }
     }
-
 
 }
 
