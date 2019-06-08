@@ -23,6 +23,6 @@ class ImageObject: Codable {
     }
     
     private enum CodingKeys: String, CodingKey {
-        case data = "original"
+        case data = "fixed_width_downsampled"
     }
 }

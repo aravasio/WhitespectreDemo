@@ -1,24 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wxx-ad-geo">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="JuV-FP-KC4">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="Wxx-ad-geo" customClass="ViewController" customModule="WhiteSpectreDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LKM-3q-oey">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hek-16-oMj">
+                                <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5fj-b8-wl7">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uPy-d4-E3S">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIT-Ia-K9Z">
+                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tap here to start searching for gifs" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Umk-6b-wke">
+                                        <rect key="frame" x="5" y="5" width="404" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ra7-AX-g5t"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Umk-6b-wke" firstAttribute="leading" secondItem="eIT-Ia-K9Z" secondAttribute="leading" constant="5" id="232-eu-qxj"/>
+                                    <constraint firstAttribute="bottom" secondItem="Umk-6b-wke" secondAttribute="bottom" constant="5" id="4ng-re-eJ1"/>
+                                    <constraint firstAttribute="trailing" secondItem="Umk-6b-wke" secondAttribute="trailing" constant="5" id="YSz-iP-3aD"/>
+                                    <constraint firstItem="Umk-6b-wke" firstAttribute="top" secondItem="eIT-Ia-K9Z" secondAttribute="top" constant="5" id="xm9-nH-Uc0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="akv-wU-pEd" firstAttribute="bottom" secondItem="Hek-16-oMj" secondAttribute="bottom" id="Ar4-OV-SfJ"/>
+                            <constraint firstItem="Hek-16-oMj" firstAttribute="leading" secondItem="akv-wU-pEd" secondAttribute="leading" id="Kdl-lA-nsN"/>
+                            <constraint firstItem="eIT-Ia-K9Z" firstAttribute="leading" secondItem="akv-wU-pEd" secondAttribute="leading" id="N7l-cU-VzA"/>
+                            <constraint firstItem="akv-wU-pEd" firstAttribute="trailing" secondItem="Hek-16-oMj" secondAttribute="trailing" id="Q5h-Aw-I8r"/>
+                            <constraint firstItem="eIT-Ia-K9Z" firstAttribute="top" secondItem="akv-wU-pEd" secondAttribute="top" id="fnQ-vM-0Vc"/>
+                            <constraint firstItem="Hek-16-oMj" firstAttribute="top" secondItem="eIT-Ia-K9Z" secondAttribute="bottom" id="hDZ-ih-MTl"/>
+                            <constraint firstItem="akv-wU-pEd" firstAttribute="trailing" secondItem="eIT-Ia-K9Z" secondAttribute="trailing" id="mzb-Lf-Ify"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="akv-wU-pEd"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Hek-16-oMj" id="QX0-li-T3j"/>
+                        <outlet property="searchField" destination="Umk-6b-wke" id="q88-A8-rZH"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YxI-ua-JCI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-33" y="68"/>
         </scene>
     </scenes>
 </document>

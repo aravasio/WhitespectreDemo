@@ -31,6 +31,9 @@ class API {
     //    fileprivate static let stickerProvider = MoyaProvider<StickerRequest>(plugins: [NetworkLoggerPlugin(verbose: true)])
     
     
+    private static var fetchTask: Cancellable? = nil
+    
+    
     // The current query is always stored here. It invalidates all previous queries.
     
     /**
@@ -41,7 +44,11 @@ class API {
      */
     static func getGifs(for criteria: String, page: Int, completion: @escaping ([GIFObject]) -> ()) {
         
-        let _ = API.fetch(provider: gifsProvider, endpoint: .search(type: .gif, criteria: criteria, page: page), returnType: GIFResponse.self, completion: { result in
+        if let task = fetchTask {
+            task.cancel()
+        }
+        
+        fetchTask = API.fetch(provider: gifsProvider, endpoint: .search(type: .gif, criteria: criteria, page: page), returnType: GIFResponse.self, completion: { result in
             completion(result.gifs)
         })
     }

@@ -8,5 +8,6 @@ target 'WhiteSpectreDemo' do
   # Pods for WhiteSpectreDemo
   pod 'Moya'
   pod 'ReachabilitySwift'
+  pod 'SDWebImage'
 
 end
